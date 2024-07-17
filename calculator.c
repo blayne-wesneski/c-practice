@@ -44,13 +44,8 @@ int main()
 
 void addition()
 {
-    printf("Enter your first number\n");
-    double num1;
-    scanf("%lf", &num1);
-
-    printf("Enter your second number\n");
-    double num2;
-    scanf("%lf", &num2);
+    double num1 = number();
+    double num2 = number();
 
     double result = num1 + num2;
 
@@ -98,7 +93,6 @@ void division()
     if (num2 == 0)
     {
         printf("Division by zero\n");
-        return 0;
     }
     double result = num1 / num2;
 
