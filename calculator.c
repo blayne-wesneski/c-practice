@@ -5,6 +5,7 @@ void addition();
 void subtraction();
 void multiplication();
 void division();
+double number();
 
 int main()
 {
@@ -53,56 +54,54 @@ void addition()
 
     double result = num1 + num2;
 
-    //TODO dynamic formatting based on tailing decimal digits
+    // TODO dynamic formatting based on tailing decimal digits
     printf("The result is %lf\n", result);
+}
+
+double number()
+{
+    double num;
+    scanf("%lf", &num);
+    return num;
 }
 
 void subtraction()
 {
 
-    printf("Enter your first number\n");
-    double num1;
-    scanf("%lf", &num1);
-
-    printf("Enter your second number\n");
-    double num2;
-    scanf("%lf", &num2);
+    double num1 = number();
+    double num2 = number();
 
     double result = num1 - num2;
 
-    //TODO dynamic formatting based on tailing decimal digits
+    // TODO dynamic formatting based on tailing decimal digits
     printf("The result is %lf\n", result);
 }
 
 void multiplication()
 {
-    printf("Enter your first number\n");
-    double num1;
-    scanf("%lf", &num1);
 
-    printf("Enter your second number\n");
-    double num2;
-    scanf("%lf", &num2);
+    double num1 = number();
+    double num2 = number();
 
     double result = num1 * num2;
 
-    //TODO dynamic formatting based on tailing decimal digits
+    // TODO dynamic formatting based on tailing decimal digits
     printf("The result is %lf\n", result);
 }
 
 void division()
 {
 
-    printf("Enter your first number\n");
-    double num1;
-    scanf("%lf", &num1);
+    double num1 = number();
+    double num2 = number();
 
-    printf("Enter your second number\n");
-    double num2;
-    scanf("%lf", &num2);
-
+    if (num2 == 0)
+    {
+        printf("Division by zero\n");
+        return 0;
+    }
     double result = num1 / num2;
 
-    //TODO dynamic formatting based on tailing decimal digits
+    // TODO dynamic formatting based on tailing decimal digits
     printf("The result is %lf\n", result);
 }
